@@ -10,6 +10,11 @@
 *.o
 *.obj
 
+# 3D Source files
+*.blend
+*.blend1
+*.fbx
+
 # Precompiled Headers
 *.gch
 *.pch
