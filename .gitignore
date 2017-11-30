@@ -76,3 +76,19 @@ DerivedDataCache/*
 SkyConqProject/Saved/
 SkyConqProject/Intermediate/
 SkyConqProject/Content/StarterContent/
+
+# Added from UE4-generated .gitignore
+Binaries
+DerivedDataCache
+Intermediate
+Saved
+.vscode
+.vs
+*.VC.db
+*.opensdf
+*.opendb
+*.sdf
+*.sln
+*.suo
+*.xcodeproj
+*.xcworkspace
