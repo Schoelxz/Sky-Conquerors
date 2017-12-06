@@ -13,6 +13,13 @@
 			]
 		}
 	],
+	"Plugins": [
+		{
+			"Name": "DonAINavigation",
+			"Enabled": true,
+			"MarketplaceURL": "com.epicgames.launcher://ue/marketplace/content/81b4bd085c8c41508edfeb160b6ddf62"
+		}
+	],
 	"TargetPlatforms": [
 		"WindowsNoEditor"
 	]
