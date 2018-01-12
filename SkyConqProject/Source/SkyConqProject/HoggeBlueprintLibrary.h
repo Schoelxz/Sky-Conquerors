@@ -17,5 +17,6 @@ class SKYCONQPROJECT_API UHoggeBlueprintLibrary : public UBlueprintFunctionLibra
 	UFUNCTION(BlueprintCallable, Category="Component|AddComponent")
 	static class UActorComponent* AddComponentFromClass(TSubclassOf<UActorComponent> ActorComponentClass, class AActor* Outer);
 	
-	
+	UFUNCTION(BlueprintCallable, Category="Gameplay")
+	static int HoggeServerTravel(class AActor* Instigator, const FString& FURL, bool bAbsolute = true, bool bShouldSkipNotify = true);
 };

@@ -20,3 +20,14 @@ UActorComponent* UHoggeBlueprintLibrary::AddComponentFromClass(TSubclassOf<UActo
 }
 
 
+int UHoggeBlueprintLibrary::HoggeServerTravel(AActor* Instigator, const FString& FURL, bool bAbsolute, bool bShouldSkipNotify)
+{
+	if (!GEngine)
+		return 1;
+	UWorld* World = GEngine->GetWorldFromContextObjectChecked(Instigator);
+	
+	if (!World)
+		return 2;
+	
+	return World->ServerTravel(FURL, bAbsolute, bShouldSkipNotify) ? 10 : 11;
+}
