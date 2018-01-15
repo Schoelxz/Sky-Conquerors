@@ -19,8 +19,7 @@ UActorComponent* UHoggeBlueprintLibrary::AddComponentFromClass(TSubclassOf<UActo
 	return NewComp;
 }
 
-
-int UHoggeBlueprintLibrary::HoggeServerTravel(AActor* Instigator, const FString& FURL, bool bAbsolute, bool bShouldSkipNotify)
+int UHoggeBlueprintLibrary::ServerTravel(AActor* Instigator, const FString& URL, bool bAbsolute, bool bShouldSkipNotify)
 {
 	if (!GEngine)
 		return 1;
@@ -29,5 +28,5 @@ int UHoggeBlueprintLibrary::HoggeServerTravel(AActor* Instigator, const FString&
 	if (!World)
 		return 2;
 	
-	return World->ServerTravel(FURL, bAbsolute, bShouldSkipNotify) ? 10 : 11;
+	return World->ServerTravel(URL, bAbsolute, bShouldSkipNotify) ? 10 : 11;
 }
