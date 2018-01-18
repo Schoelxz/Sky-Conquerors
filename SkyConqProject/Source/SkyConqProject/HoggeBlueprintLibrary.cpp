@@ -19,4 +19,18 @@ UActorComponent* UHoggeBlueprintLibrary::AddComponentFromClass(TSubclassOf<UActo
 	return NewComp;
 }
 
+void UHoggeBlueprintLibrary::ServerTravel(AActor* Instigator, const FString& URL, EServerTravelStatus& Branches, bool bAbsolute, bool bShouldSkipNotify)
+{
+	Branches = EServerTravelStatus::CouldNotServerTravel;
+	if (!GEngine)
+		return;
+	UWorld* World = GEngine->GetWorldFromContextObjectChecked(Instigator);
+	
+	if (!World)
+		return;
 
+	if (World->ServerTravel(URL, bAbsolute, bShouldSkipNotify))
+		Branches = EServerTravelStatus::CouldServerTravel;
+		
+	return;
+}
